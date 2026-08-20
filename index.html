@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amigo Goloso 🍬 — Registro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="eyebrow">Paso 1 · Registro</span>
+    <h1>Amigo <span>Goloso</span> 🍬</h1>
+    <p class="sub">Escribe tu nombre para entrar al sorteo. Cuando todos estén dentro, cada quien va a la página del sorteo desde su propio celular o computador.</p>
+  </header>
+
+  <!-- Formulario de registro -->
+  <section class="card" id="cardRegistroForm">
+    <h2>🧁 Regístrate</h2>
+    <p class="desc">Tu nombre entra automáticamente al sorteo del amigo goloso.</p>
+    <div class="row">
+      <input type="text" id="inputNombre" placeholder="Tu nombre" maxlength="40" autocomplete="off">
+      <button class="btn-primary" id="btnRegistrar">Registrarme</button>
+    </div>
+    <p class="desc" id="lockNote" style="display:none; margin-top:14px; margin-bottom:0;">🔒 El sorteo ya comenzó, así que el registro quedó cerrado.</p>
+  </section>
+
+  <!-- Estado ya registrado -->
+  <section class="card" id="cardYaRegistrado" style="display:none;">
+    <h2>✅ ¡Ya estás dentro!</h2>
+    <p class="desc">Quedaste registrado como <strong id="nombreConfirmado">—</strong>. Cuando quieras saber a quién te tocó consentir, ve a la página del sorteo.</p>
+    <a class="btn-primary link-btn" href="sorteo.html">Ir al sorteo 🍬</a>
+  </section>
+
+  <!-- Contador simple, sin nombres -->
+  <section class="card">
+    <h2 style="margin:0 0 6px;">🍭 Participantes</h2>
+    <p class="desc" id="contadorTexto" style="margin-bottom:4px;">Hay 0 personas registradas</p>
+    <p class="desc" id="contadorMin" style="margin-bottom:0;"></p>
+  </section>
+
+  <div style="text-align:center; margin-top: 8px;">
+    <a href="sorteo.html" class="btn-ghost">¿Ya te registraste antes? Ir directo al sorteo →</a>
+  </div>
+
+  <footer>Hecho para tu intercambio de amigo goloso 🎁</footer>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/common.js"></script>
+<script src="js/registro.js"></script>
+</body>
+</html>

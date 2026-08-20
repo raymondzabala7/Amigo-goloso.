@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amigo Goloso 🍬 — Sorteo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="eyebrow">Paso 2 · Sorteo</span>
+    <h1>Tu amigo <span>goloso</span> 🍬</h1>
+    <p class="sub">Presiona el botón. El sistema sabe quién eres y te va a decir a quién te tocó consentir — solo a ti.</p>
+  </header>
+
+  <section class="card">
+    <p class="quien-eres" id="quienEres" style="display:none;"></p>
+
+    <div class="identify-box" id="identifyBox" style="display:none;">
+      <p>¿Cuál es tu nombre en la lista?</p>
+      <div class="row">
+        <select id="selectIdentidad"></select>
+        <button class="btn-primary" id="btnConfirmarIdentidad">Soy yo</button>
+      </div>
+    </div>
+
+    <div class="candy-zone">
+      <button class="candy-btn" id="btnAmigoSecreto">Amigo Secreto</button>
+      <div class="reveal-card" id="revealCard">
+        <div class="label">Te tocó consentir a</div>
+        <p class="name" id="nombreRevelado">—</p>
+      </div>
+      <div>
+        <button class="btn-ghost" id="btnCambiarIdentidad" style="display:none;">No soy yo, cambiar identidad</button>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin-top: 8px;">
+    <a href="index.html" class="btn-ghost">← Volver al registro</a>
+  </div>
+
+  <footer>Hecho para tu intercambio de amigo goloso 🎁</footer>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/common.js"></script>
+<script src="js/sorteo.js"></script>
+</body>
+</html>
